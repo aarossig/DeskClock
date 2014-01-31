@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<appSettings>
+		<add key="gmailUsername" value="yourgmailusername@gmail.com" />
+		<add key="gmailPassword" value="yourpassword" />
+
+		<add key="weatherAppId" value="310d46bbcf4aaf1b05d42ff6ba4b1267" />
+		<add key="weatherCity" value="Palo Alto,California" />
+	</appSettings>
+</configuration>

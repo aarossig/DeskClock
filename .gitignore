@@ -1,2 +1,6 @@
 DeskClock/bin/*
 DeskClock/obj/*
+GifPrepper/bin/*
+GifPrepper/obj/*
+*.config
+*.userprefs

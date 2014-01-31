@@ -1,0 +1,2503 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ActiveUp.Net.Imap4</name>
+    </assembly>
+    <members>
+        <member name="T:ActiveUp.Net.Mail.Fetch">
+            <summary>
+            Allows to fetch (retrieve) partial or complete messages, as well as specific message informations.
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.Body(System.Int32)">
+            <summary>
+            Returns a non-extensible form of the BodyStructure() method.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The server's response containing a parenthesized list.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectMailbox("inbox");
+            string body = inbox.Fetch.Body(1);
+            inbox.Close();
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectMailbox("inbox")
+            Dim body As String = inbox.Fetch.Body(1);
+            inbox.Close()
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectMailbox("inbox");
+            var body:string = inbox.Fetch.Body(1);
+            inbox.Close();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.BodySection(System.Int32,System.Int32)">
+            <summary>
+            Fetches a specific section of the message's body.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="section">The section (part number) to be fetched.</param>
+            <returns>The server's response.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectMailbox("inbox");
+            string body = inbox.Fetch.BodySection(1,3);
+            inbox.Close();
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectMailbox("inbox")
+            Dim body As String = inbox.Fetch.Body(1,3);
+            inbox.Close()
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectMailbox("inbox");
+            var body:string = inbox.Fetch.Body(1,3);
+            inbox.Close();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.BodyStructure(System.Int32)">
+            <summary>
+            Fetches the message's body structure.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The server's response containing a parenthesized list</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectMailbox("inbox");
+            string body = inbox.Fetch.BodyStructure(1);
+            inbox.Close();
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectMailbox("inbox")
+            Dim body As String = inbox.Fetch.BodyStructure(1);
+            inbox.Close()
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectMailbox("inbox");
+            var body:string = inbox.Fetch.BodyStructure(1);
+            inbox.Close();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.InternalDate(System.Int32)">
+            <summary>
+            Fetches the message's internal date.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's internal date.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectMailbox("inbox");
+            string internalDate = inbox.Fetch.InternalDate(1);
+            inbox.Close();
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectMailbox("inbox")
+            Dim internalDate As String = inbox.Fetch.InternalDate(1);
+            inbox.Close()
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectMailbox("inbox");
+            var internalDate:string = inbox.Fetch.InternalDate(1);
+            inbox.Close();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.Flags(System.Int32)">
+            <summary>
+            Fetches the message's flags.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message info to be fetched.</param>
+            <returns>A collection of flags.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectMailbox("inbox");
+            FlagCollection flags = inbox.Fetch.Flags(1);
+            inbox.Close();
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectMailbox("inbox")
+            Dim flags As FlagCollection = inbox.Fetch.Flags(1);
+            inbox.Close()
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectMailbox("inbox");
+            var flags:FlagCollection = inbox.Fetch.Flags(1);
+            inbox.Close();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.Header(System.Int32)">
+            <summary>
+            Fetches the message's Rfc822 compliant Header (parsable by the Parsing namespace classes).
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the Header to be fetched.</param>
+            <returns>The message's Header as a byte array.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.HeaderObject(System.Int32)">
+            <summary>
+            Fetches the message's Rfc822 compliant header.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the Header to be fetched.</param>
+            <returns>The message's Header as a Header object.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectMailbox("inbox");
+            Header Header = inbox.Fetch.Header(1);
+            inbox.Close();
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectMailbox("inbox")
+            Dim Header As Header = inbox.Fetch.Header(1);
+            inbox.Close()
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectMailbox("inbox");
+            var header:Header = inbox.Fetch.Header(1);
+            inbox.Close();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.HeaderStream(System.Int32)">
+            <summary>
+            Fetches the message's Rfc822 compliant Header (parsable by the Parsing namespace classes).
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the Header to be fetched.</param>
+            <returns>The message's Header as a MemoryStream.</returns>
+            <example><see cref="M:ActiveUp.Net.Mail.Fetch.HeaderObject(System.Int32)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.HeaderString(System.Int32)">
+            <summary>
+            Fetches the message's Rfc822 compliant Header (parsable by the Parsing namespace classes).
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the Header to be fetched.</param>
+            <returns>The message's Header as a string.</returns>
+            <example><see cref="M:ActiveUp.Net.Mail.Fetch.HeaderObject(System.Int32)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.HeaderLinesPeek(System.Int32,System.String[])">
+            <summary>
+            Fetches the requested Header lines without setting the \Seen flag.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="headerHeaders">An array of string representing the requested headers.</param>
+            <returns>A NameValueCollection where Names are the Header delimiters and Values are the Header bodies.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectMailbox("inbox");
+            //Request the message's subject and from header.
+            NameValueCollection lines = inbox.Fetch.HeaderLinesPeek(1,new string[] {"subject","from"});
+            //Extract the subject.
+            string messageSubject = lines["subject"];
+            inbox.Close();
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectMailbox("inbox")
+            'Request the message's subject and from header.
+            Dim lines As NameValueCollection = inbox.Fetch.HeaderLinesPeek(1,new string[] {"subject","from"})
+            'Extract the subject.
+            Dim messageSubject As String = lines("subject")
+            inbox.Close()
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectMailbox("inbox");
+            //Request the message's subject and from header.
+            var lines:NameValueCollection = inbox.Fetch.HeaderLinesPeek(1,new string[] {"subject","from"});
+            //Extract the subject.
+            var messageSubject:string = lines["subject"];
+            inbox.Close();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.HeaderLinesNotPeek(System.Int32,System.String[])">
+            <summary>
+            Same as HeaderLines except that it will return all headers EXCEPT the specified ones, without setting the \Seen flag.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="headerHeaders">An array of string representing the NOT-requested headers.</param>
+            <returns>A NameValueCollection where Names are the Header delimiters and Values are the Header bodies.</returns>
+            <example><see cref="M:ActiveUp.Net.Mail.Fetch.HeaderLines(System.Int32,System.String[])"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.HeaderLines(System.Int32,System.String[])">
+            <summary>
+            Fetches the requested Header lines.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="headerHeaders">An array of string representing the requested headers.</param>
+            <returns>A NameValueCollection where Names are the Header delimiters and Values are the Header bodies.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectMailbox("inbox");
+            //Request the message's subject and from header.
+            NameValueCollection lines = inbox.Fetch.HeaderLines(1,new string[] {"subject","from"});
+            //Extract the subject.
+            string messageSubject = lines["subject"];
+            inbox.Close();
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectMailbox("inbox")
+            'Request the message's subject and from header.
+            Dim lines As NameValueCollection = inbox.Fetch.HeaderLines(1,new string[] {"subject","from"})
+            'Extract the subject.
+            Dim messageSubject As String = lines("subject")
+            inbox.Close()
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectMailbox("inbox");
+            //Request the message's subject and from header.
+            var lines:NameValueCollection = inbox.Fetch.HeaderLines(1,new string[] {"subject","from"});
+            //Extract the subject.
+            var messageSubject:string = lines["subject"];
+            inbox.Close();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.HeaderLinesNot(System.Int32,System.String[])">
+            <summary>
+            Same as HeaderLines except that it will return all headers EXCEPT the specified ones.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="headerHeaders">An array of string representing the NOT-requested headers.</param>
+            <returns>A NameValueCollection where Names are the Header delimiters and Values are the Header bodies.</returns>
+            <example><see cref="M:ActiveUp.Net.Mail.Fetch.HeaderLines(System.Int32,System.String[])"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.Message(System.Int32)">
+            <summary>
+            Fetches the message's Rfc822 compliant form.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's data as a byte array.</returns>
+            <example><see cref="M:ActiveUp.Net.Mail.Fetch.MessageObject(System.Int32)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.MessageObject(System.Int32)">
+            <summary>
+            Fetches the message's Rfc822 compliant form.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's data as a Message object.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectMailbox("inbox");
+            Message message = inbox.Fetch.Message(1);
+            inbox.Close();
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectMailbox("inbox")
+            Dim message As Message = inbox.Fetch.Message(1);
+            inbox.Close()
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectMailbox("inbox");
+            var message:Message = inbox.Fetch.Message(1);
+            inbox.Close();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.MessageObjectWithGMailExtensions(System.Int32)">
+            <summary>
+            Fetches the message's Rfc822 compliant form and adds the GMail specific headers
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's data as a Message object.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.MessageObjectPeekWithGMailExtensions(System.Int32)">
+            <summary>
+            Fetches the message's Rfc822 compliant form and adds the GMail specific headers without marking it as read
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's data as a Message object.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.MessageStream(System.Int32)">
+            <summary>
+            Fetches the message's Rfc822 compliant form.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's data as a MemoryStream.</returns>
+            <example><see cref="M:ActiveUp.Net.Mail.Fetch.MessageObject(System.Int32)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.MessageString(System.Int32)">
+            <summary>
+            Fetches the message's Rfc822 compliant form.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's data as a string.</returns>
+            <example><see cref="M:ActiveUp.Net.Mail.Fetch.MessageObject(System.Int32)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.MessageRawString(System.Int32,System.Boolean,System.String[])">
+            <summary>
+            Fetches the raw reponse for a message fetch.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="markMessagesAsRead">Set to true to mark the retrieved messages as read</param>
+            <param name="extraDataItemToFetch">Extra fields to retrive besides rfc822</param>
+            <returns>The response data as a string.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.MessagePeek(System.Int32)">
+            <summary>
+            Same as Message() except that it doesn't set the Seen flag.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's data as a byte array.</returns>
+            <example><see cref="M:ActiveUp.Net.Mail.Fetch.MessageObject(System.Int32)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.MessageObjectPeek(System.Int32)">
+            <summary>
+            Same as MessageObject() except that it doesn't set the Seen flag.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's data as a Message object.</returns>
+            <example><see cref="M:ActiveUp.Net.Mail.Fetch.MessageObject(System.Int32)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.MessageSreamPeek(System.Int32)">
+            <summary>
+            Same as MessageStream() except that it doesn't set the Seen flag.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's data as a MemoryStream.</returns>
+            <example><see cref="M:ActiveUp.Net.Mail.Fetch.MessageStream(System.Int32)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.MessageStringPeek(System.Int32)">
+            <summary>
+            Same as MessageString() except that it doesn't set the Seen flag.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's data as a string.</returns>
+            <example><see cref="M:ActiveUp.Net.Mail.Fetch.MessageString(System.Int32)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.Size(System.Int32)">
+            <summary>
+            Fetches the specified message's size (in bytes).
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's size in bytes.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectMailbox("inbox");
+            int size = inbox.Fetch.Size(1);
+            inbox.Close();
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectMailbox("inbox")
+            Dim size As Integer = inbox.Fetch.Size(1);
+            inbox.Close()
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectMailbox("inbox");
+            var size:int = inbox.Fetch.Size(1);
+            inbox.Close();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.Text(System.Int32)">
+            <summary>
+            Fetches the specified message's text (body).
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's text.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectMailbox("inbox");
+            string messageBody = inbox.Fetch.Text(1);
+            inbox.Close();
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectMailbox("inbox")
+            Dim messageBody As Header = inbox.Fetch.Text(1);
+            inbox.Close()
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectMailbox("inbox");
+            var messageBody:string = inbox.Fetch.Text(1);
+            inbox.Close();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.TextPeek(System.Int32)">
+            <summary>
+            Same as Text() except that it doesn't set the Seen flag.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's text.</returns>
+            <example><see cref="M:ActiveUp.Net.Mail.Fetch.Text(System.Int32)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.Uid(System.Int32)">
+            <summary>
+            Fetches the specified message's Unique Identifier number.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <returns>The message's unique identifier number.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectMailbox("inbox");
+            int uid = inbox.Fetch.Uid(1);
+            inbox.Close();
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectMailbox("inbox")
+            Dim uid As Integer = inbox.Fetch.Uid(1);
+            inbox.Close()
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectMailbox("inbox");
+            var uid:int = inbox.Fetch.Uid(1);
+            inbox.Close();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.PartialBodySection(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Fetches [count] bytes starting at [index].
+            Partial version of BodySection().
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="section">The message's body section to be retrieved.</param>
+            <param name="index">The byte index to start retrieving from.</param>
+            <param name="count">The amount of bytes to be retrieved, starting at index.</param>
+            <returns>The requested byte array.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.PartialHeader(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Fetches [count] bytes starting at [index].
+            Partial version of Header().
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="index">The byte index to start retrieving from.</param>
+            <param name="count">The amount of bytes to be retrieved, starting at index.</param>
+            <returns>The requested byte array.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.PartialMessage(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Fetches [count] bytes starting at [index].
+            Partial version of Message().
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="index">The byte index to start retrieving from.</param>
+            <param name="count">The amount of bytes to be retrieved, starting at index.</param>
+            <returns>The requested byte array.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.PartialMessagePeek(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Fetches [count] bytes starting at [index].
+            Partial version of MessagePeek().
+            Same as PartialMessage() except that it doesn't set the Seen flag.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="index">The byte index to start retrieving from.</param>
+            <param name="count">The amount of bytes to be retrieved, starting at index.</param>
+            <returns>The requested byte array.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.PartialText(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Fetches [count] bytes starting at [index].
+            Partial version of Text().
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="index">The byte index to start retrieving from.</param>
+            <param name="count">The amount of bytes to be retrieved, starting at index.</param>
+            <returns>The requested byte array.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.PartialTextPeek(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Fetches [count] bytes starting at [index].
+            Partial version of TextPeek().
+            Same as PartialText() except that it doesn't set the Seen flag.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="index">The byte index to start retrieving from.</param>
+            <param name="count">The amount of bytes to be retrieved, starting at index.</param>
+            <returns>The requested byte array.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.PartialBodySectionString(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Fetches [count] bytes starting at [index].
+            Partial version of BodySectionString().
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="index">The byte index to start retrieving from.</param>
+            <param name="count">The amount of bytes to be retrieved, starting at index.</param>
+            <returns>The requested byte array converted to a string.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.PartialHeaderString(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Fetches [count] bytes starting at [index].
+            Partial version of HeaderString().
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="index">The byte index to start retrieving from.</param>
+            <param name="count">The amount of bytes to be retrieved, starting at index.</param>
+            <returns>The requested byte array converted to a string.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.PartialMessageString(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Fetches [count] bytes starting at [index].
+            Partial version of MessageString().
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="index">The byte index to start retrieving from.</param>
+            <param name="count">The amount of bytes to be retrieved, starting at index.</param>
+            <returns>The requested byte array converted to a string.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.PartialMessageStringPeek(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Fetches [count] bytes starting at [index].
+            Partial version of MessagePeekString().
+            Same as PartialMessageString() except that it doesn't set the Seen flag.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="index">The byte index to start retrieving from.</param>
+            <param name="count">The amount of bytes to be retrieved, starting at index.</param>
+            <returns>The requested byte array converted to a string.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.PartialTextString(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Fetches [count] bytes starting at [index].
+            Partial version of TextString().
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="index">The byte index to start retrieving from.</param>
+            <param name="count">The amount of bytes to be retrieved, starting at index.</param>
+            <returns>The requested byte array converted to a string.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Fetch.PartialTextStringPeek(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Fetches [count] bytes starting at [index].
+            Partial version of TextPeekString().
+            Same as PartialTextString() except that it doesn't set the Seen flag.
+            </summary>
+            <param name="messageOrdinal">The ordinal position of the message to be fetched.</param>
+            <param name="index">The byte index to start retrieving from.</param>
+            <param name="count">The amount of bytes to be retrieved, starting at index.</param>
+            <returns>The requested byte array converted to a string.</returns>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Fetch.ParentMailbox">
+            <summary>
+            The Fetch's parent mailbox.
+            </summary>
+        </member>
+        <member name="T:ActiveUp.Net.Mail.Flag">
+            <summary>
+            Represents a flag.
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Flag.ToString">
+            <summary>
+            The name of the flag.
+            </summary>
+            <returns>The name of the flag.</returns>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Flag.Name">
+            <summary>
+            The flags's name.
+            </summary>
+        </member>
+        <member name="T:ActiveUp.Net.Mail.FlagCollection">
+            <summary>
+            Represents a collection of Flags.
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.FlagCollection.Add(ActiveUp.Net.Mail.IFlag)">
+            <summary>
+            Adds the provided flag to the collection.
+            </summary>
+            <param name="flag"></param>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.FlagCollection.Add(System.String)">
+            <summary>
+            Adds a new flag to the collection with the specified name.
+            </summary>
+            <param name="flagName"></param>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.FlagCollection.Item(System.Int32)">
+            <summary>
+            Retrieves the flag at index [index] in the collection.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.FlagCollection.Item(System.String)">
+            <summary>
+            Retrieves the flag with the specified name in the collection.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.FlagCollection.Merged">
+            <summary>
+            A string representing the collection (in IMAP4rev1 compatible format).
+            </summary>
+        </member>
+        <member name="T:ActiveUp.Net.Mail.Imap4Client">
+            <summary>
+            This class allows communication with an IMAP4 or IMAP4rev1 compatible server.
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.renderSafeParam(System.String)">
+            <summary>
+            Takes a command parameter and makes it safe for IMAP
+            </summary>
+            <param name="commandParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.Connect(System.String)">
+            <summary>
+            Connects to the server.
+            </summary>
+            <param name="host">Server address.</param>
+            <returns>The server's response greeting.</returns>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            ...
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            ...
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            ...
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.BeginConnect(System.String,System.AsyncCallback)">
+            <summary>
+            Begins the connect.
+            </summary>
+            <param name="host">The host.</param>
+            <param name="callback">The callback.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.Connect(System.String,System.Int32)">
+            <summary>
+            Connects to the server.
+            </summary>
+            <param name="host">Server address.</param>
+            <param name="port">Server port.</param>
+            <returns>The server's response greeting.</returns>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com",8505);
+            ...
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com",8505)
+            ...
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com",8505);
+            ...
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.BeginConnect(System.String,System.Int32,System.AsyncCallback)">
+            <summary>
+            Begins the connect.
+            </summary>
+            <param name="host">The host.</param>
+            <param name="port">The port.</param>
+            <param name="callback">The callback.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.Connect(System.Net.IPAddress,System.Int32)">
+            <summary>
+            Connects the specified addr.
+            </summary>
+            <param name="addr">The addr.</param>
+            <param name="port">The port.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.BeginConnect(System.Net.IPAddress,System.Int32,System.AsyncCallback)">
+            <summary>
+            Begins the connect.
+            </summary>
+            <param name="addr">The addr.</param>
+            <param name="port">The port.</param>
+            <param name="callback">The callback.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.Connect(System.Net.IPAddress[],System.Int32)">
+            <summary>
+            Connects the specified addresses.
+            </summary>
+            <param name="addresses">The addresses.</param>
+            <param name="port">The port.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.BeginConnect(System.String,System.String,System.String,System.AsyncCallback)">
+            <summary>
+            Begins the connect.
+            </summary>
+            <param name="host">The host.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <param name="callback">The callback.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.Connect(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Connects the specified host.
+            </summary>
+            <param name="host">The host.</param>
+            <param name="port">The port.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.BeginConnect(System.String,System.Int32,System.String,System.String,System.AsyncCallback)">
+            <summary>
+            Begins the connect.
+            </summary>
+            <param name="host">The host.</param>
+            <param name="port">The port.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <param name="callback">The callback.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.EndConnect(System.IAsyncResult)">
+            <summary>
+            Ends the connect.
+            </summary>
+            <param name="result">The result.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.Disconnect">
+            <summary>
+            Logs out and closes the connection with the server.
+            </summary>
+            <returns>The server's googbye greeting.</returns>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            //Do some work...
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            'Do some work...
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            //Do some work...
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.Login(System.String,System.String)">
+            <summary>
+            Logs in to the specified account.
+            </summary>
+            <param name="username">Username of the account.</param>
+            <param name="password">Password of the account.</param>
+            <returns>The server's response.</returns>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            //Do some work...
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            'Do some work...
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            //Do some work...
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.LoginFast(System.String,System.String)">
+            <summary>
+            Same as Login but doesn't load the AllMailboxes and Mailboxes properties of the Imap4Client object, ensuring faster operation.
+            </summary>
+            <param name="username">Username of the account.</param>
+            <param name="password">Password of the account.</param>
+            <returns>The server's response.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.Authenticate(System.String,System.String,ActiveUp.Net.Mail.SaslMechanism)">
+            <summary>
+            Authenticates using the given SASL mechanism.
+            </summary>
+            <param name="username">Username to authenticate as.</param>
+            <param name="password">Password.</param>
+            <param name="mechanism">SASL mechanism to be used.</param>
+            <returns>The server's response.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Authenticate("user","pass",SASLMechanism.CramMd5);
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Authenticate("user","pass",SASLMechanism.CramMd5)
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Authenticate("user","pass",SASLMechanism.CramMd5);
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.StartIdle">
+            <summary>
+            Start the idle on the mail server.
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.StopIdle">
+            <summary>
+            Stop the idle on the imap4 server.
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.Command(System.String,ActiveUp.Net.Mail.CommandOptions)">
+            <summary>
+            Sends the command to the server.
+            The command tag is automatically added.
+            </summary>
+            <param name="command">The command (with arguments if necesary) to be sent.</param>
+            <returns>The server's response.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("user","pass");
+            imap.Command("select inbox");
+            //Selected mailbox is inbox.
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("user","pass")
+            imap.Command("select inbox")
+            'Selected mailbox is inbox.
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("user","pass");
+            imap.Command("select inbox");
+            //Selected mailbox is inbox.
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.GetStream">
+            <summary>
+            Gets the communacation stream of this object.
+            </summary>
+            <returns>A Stream object, either of type NetworkStream or SslStream if the channel is secured.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.Noop">
+            <summary>
+            Performs a NOOP command which is used to maintain the connection alive.
+            </summary>
+            <returns>The server response.</returns>
+            <remarks>Some servers include mailbox update informations in the response.</remarks>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            try
+            {
+            	imap.Noop();
+            	imap.Disconnect();
+            }
+            catch
+            {
+            	throw new Exception("Connection lost.");
+            }
+             
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            Try
+            	imap.Noop()
+            	imap.Disconnect()
+            Catch
+            	Throw New Exception("Connection lost.");
+            End Try
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            try
+            {
+            	imap.Noop();
+            	imap.Disconnect();
+            }
+            catch
+            {
+            	throw new Exception("Connection lost.");
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.Check">
+            <summary>
+            Equivalent to Noop().
+            </summary>
+            <returns>The server's response.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.Close">
+            <summary>
+            Closes the mailbox and removes messages marked with the Deleted flag.
+            </summary>
+            <returns>The server's response.</returns>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectInbox("inbox");
+            //Get the amount of messages in the inbox.
+            int messageCount = inbox.MessageCount;
+            inbox.Close();
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectInbox("inbox")
+            //Get the amount of messages in the inbox.
+            Dim messageCount As Integer = inbox.MessageCount
+            inbox.Close()
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectInbox("inbox");
+            //Get the amount of messages in the inbox.
+            var messageCount:int = inbox.MessageCount;
+            inbox.Close();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.Expunge">
+            <summary>
+            Removes all messages marked with the Deleted flag.
+            </summary>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectInbox("inbox");
+            //Mark message 1 for deletion.
+            inbox.DeleteMessage(1);
+            //Effectively remove all message marked with Deleted flag.
+            imap.Expunge();
+            //Message 1 is permanently removed.
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectInbox("inbox")
+            'Mark message 1 for deletion.
+            inbox.DeleteMessage(1)
+            'Effectively remove all message marked with Deleted flag.
+            imap.Expunge()
+            'Message 1 is permanently removed.
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectInbox("inbox");
+            //Mark message 1 for deletion.
+            inbox.DeleteMessage(1);
+            //Effectively remove all message marked with Deleted flag.
+            imap.Expunge();
+            //Message 1 is permanently removed.
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.GetMailboxes(System.String,System.String)">
+            <summary>
+            Retrieves a list of mailboxes.
+            </summary>
+            <param name="reference">The base path.</param>
+            <param name="mailboxName">Mailbox name.</param>
+            <returns>A MailboxCollection object containing the requested mailboxes.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("user","pass");
+            //Return all children mailboxes of "inbox".
+            MailboxCollection mailboxes = imap.GetMailboxes("inbox","*");
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("user","pass")
+            'Return all children mailboxes of "inbox".
+            Dim mailboxes As MailboxCollection = imap.GetMailboxes("inbox","*")
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("user","pass");
+            //Return all children mailboxes of "inbox".
+            var mailboxes:MailboxCollection  = imap.GetMailboxes("inbox","*");
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.LoadMailboxes">
+            <summary>
+            Fills in or refreshes the Imap4Client.AllMailboxes and Imap4Client.Mailboxes properties.
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.CreateMailbox(System.String)">
+            <summary>
+            Creates a mailbox with the specified name.
+            </summary>
+            <param name="mailboxName">The name of the new mailbox.</param>
+            <returns>The newly created mailbox.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("user","pass");
+            imap.CreateMailbox("inbox.Staff");
+            //Child mailbox of inbox named Staff has been created.
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("user","pass")
+            imap.CreateMailbox("inbox.Staff");
+            'Child mailbox of inbox named Staff has been created.
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("user","pass");
+            imap.CreateMailbox("inbox.Staff");
+            //Child mailbox of inbox named Staff has been created.
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.RenameMailbox(System.String,System.String)">
+            <summary>
+            Renames a mailbox.
+            </summary>
+            <param name="oldMailboxName">The mailbox to be renamed.</param>
+            <param name="newMailboxName">The new name of the mailbox.</param>
+            <returns>The server's response.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("user","pass");
+            imap.RenameMailbox("inbox.Staff","Staff");
+            //The Staff mailbox is now a top-level mailbox.
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("user","pass")
+            imap.RenameMailbox("inbox.Staff","Staff");
+            'The Staff mailbox is now a top-level mailbox.
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("user","pass");
+            imap.RenameMailbox("inbox.Staff","Staff");
+            //The Staff mailbox is now a top-level mailbox.
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.DeleteMailbox(System.String)">
+            <summary>
+            Deletes a mailbox.
+            </summary>
+            <param name="mailboxName">The mailbox to be deleted.</param>
+            <returns>The server's response.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("user","pass");
+            imap.DeleteMailbox("inbox.Staff");
+            //The inbox.Staff mailbox is now deleted.
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("user","pass")
+            imap.DeleteMailbox("inbox.Staff");
+            //The inbox.Staff mailbox is now deleted.
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("user","pass");
+            imap.DeleteMailbox("inbox.Staff");
+            //The inbox.Staff mailbox is now deleted.
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.SubscribeMailbox(System.String)">
+            <summary>
+            Subscribes to a mailbox.
+            </summary>
+            <param name="mailboxName">The mailbox to be subscribed to.</param>
+            <returns>The server's response.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.UnsubscribeMailbox(System.String)">
+            <summary>
+            Unsubscribes from a mailbox.
+            </summary>
+            <param name="mailboxName">The mailbox to be unsubscribed from.</param>
+            <returns>The server's response.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.SelectMailbox(System.String)">
+            <summary>
+            Selects a mailbox on the server.
+            </summary>
+            <param name="mailboxName">The mailbox to be selected.</param>
+            <returns>The selected mailbox.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("user","pass");
+            Mailbox mbox = imap.SelectMailbox("inbox.Staff");
+            //The inbox.Staff mailbox is now selected.
+            mbox.Empty(true);
+            //Mailbox inbox.Staff is now empty.
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("user","pass")
+            Dim mbox As Mailbox = imap.SelectMailbox("inbox.Staff")
+            'The inbox.Staff mailbox is now selected.
+            mbox.Empty(true)
+            'Mailbox inbox.Staff is now empty.
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("user","pass");
+            var mbox:Mailbox = imap.SelectMailbox("inbox.Staff");
+            //The inbox.Staff mailbox is now selected.
+            mbox.Empty(true);
+            //Mailbox inbox.Staff is now empty.
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Client.ExamineMailbox(System.String)">
+            <summary>
+            Same as SelectMailbox() except that the mailbox is opened with read-only permission.
+            </summary>
+            <param name="mailboxName">The mailbox to be examined.</param>
+            <returns>The examined mailbox.</returns>
+            <example>
+            <code>
+            C#
+            
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("user","pass");
+            Mailbox mbox = imap.ExamineMailbox("inbox.Staff");
+            //The inbox.Staff mailbox is now selected (read-only).
+            int recentMessageCount = mbox.Recent;
+            //There are recentMessageCount messages that haven't been read in inbox.Staff.
+            imap.Disconnect();
+            
+            VB.NET
+            
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("user","pass")
+            Dim mbox As Mailbox = imap.ExamineMailbox("inbox.Staff")
+            'The inbox.Staff mailbox is now selected (read-only).
+            Dim recentMessageCount As Integer = mbox.Recent
+            'There are recentMessageCount messages that haven't been read in inbox.Staff.
+            imap.Disconnect()
+            
+            JScript.NET
+            
+            var imap:Imap4Client = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("user","pass");
+            var mbox:Mailbox = imap.ExamineMailbox("inbox.Staff");
+            //The inbox.Staff mailbox is now selected (read-only).
+            int recentMessageCount = mbox.Recent;
+            //There are recentMessageCount messages that haven't been read in inbox.Staff.
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Imap4Client.Mailboxes">
+            <summary>
+            Mailboxes on the account.
+            </summary>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            int mailboxCount = imap.Mailboxes.Count;
+            //User jdoe1234 has mailboxCount mailboxes.
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim mailboxCount As Integer = imap.Mailboxes.Count
+            //User jdoe1234 has mailboxCount mailboxes.
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var mailboxCount:int = imap.Mailboxes.Count;
+            //User jdoe1234 has mailboxCount mailboxes.
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Imap4Client.AllMailboxes">
+            <summary>
+            Same as the Mailboxes property, except that all mailboxes on the account are presented at the same level of hierarchy.
+            In example, a child mailbox of the "INBOX" mailbox could be accessed directly with this collection.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Imap4Client.ServerCapabilities">
+            <summary>
+            Server capabilities.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Imap4Client.IsUnsafeParamsAllowed">
+            <summary>
+            Turn this on to not make any parameters safe.  Injection attacks more likely.  Turn this on only if you are already doing checking or if performance is absolutely critical.  
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.Authenticating">
+            <summary>
+            Event fired when authentication starts.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.Authenticated">
+            <summary>
+            Event fired when authentication completed.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.Nooping">
+            <summary>
+            Event fired when NOOP command is issued.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.Nooped">
+            <summary>
+            Event fired when NOOP command completed.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.TcpWriting">
+            <summary>
+            Event fired when a command is being written to the server.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.TcpWritten">
+            <summary>
+            Event fired when a command has been written to the server.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.TcpReading">
+            <summary>
+            Event fired when a response is being read from the server.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.TcpRead">
+            <summary>
+            Event fired when a response has been read from the server.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.MessageRetrieving">
+            <summary>
+            Event fired when a message is being requested using the RetrieveMessage() method.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.MessageRetrieved">
+            <summary>
+            Event fired when a message is being retrieved using the RetrieveMessage() method.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.HeaderRetrieving">
+            <summary>
+            Event fired when a message Header is being requested using the RetrieveHeader() method.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.HeaderRetrieved">
+            <summary>
+            Event fired when a message Header has been retrieved using the RetrieveHeader() method.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.Connecting">
+            <summary>
+            Event fired when attempting to connect to the remote server using the specified host.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.Connected">
+            <summary>
+            Event fired when the object is connected to the remote server or when connection failed.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.Disconnecting">
+            <summary>
+            Event fired when attempting to disconnect from the remote server.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.Disconnected">
+            <summary>
+            Event fired when the object disconnected from the remote server.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.MessageSending">
+            <summary>
+            Event fired when a message is being sent.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.MessageSent">
+            <summary>
+            Event fired when a message has been sent.
+            </summary>
+        </member>
+        <member name="E:ActiveUp.Net.Mail.Imap4Client.NewMessageReceived">
+            <summary>
+            Event fired when a new message received.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Imap4Client.IsConnected">
+            <summary>
+            Gets a value indicating whether this instance is connected.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is connected; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:ActiveUp.Net.Mail.Imap4Exception">
+            <summary>
+            Represents an IMAP4 specific error.
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Exception.#ctor">
+            <summary>
+            Generic error
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Imap4Exception.#ctor(System.String)">
+            <summary>
+            Constructor, sets message to the specified value.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:ActiveUp.Net.Mail.Mailbox">
+            <summary>
+            Represents a mailbox.
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.CreateChild(System.String)">
+            <summary>
+            Creates a child mailbox.
+            </summary>
+            <param name="mailboxName">The name of the child mailbox to be created.</param>
+            <returns>The newly created mailbox.</returns>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectInbox("inbox");
+            Mailbox staff = inbox.CreateChild("Staff");
+            int zero = staff.MessageCount
+            //Returns 0.
+            inbox.Close();
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectInbox("inbox")
+            Dim staff As Mailbox = inbox.CreateChild("Staff")
+            Dim zero As Integer = staff.MessageCount
+            'Returns 0.
+            inbox.Close()
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectInbox("inbox");
+            var staff:Mailbox = inbox.CreateChild("Staff");
+            var zero:int = staff.MessageCount
+            //Returns 0.
+            inbox.Close();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Subscribe">
+            <summary>
+            Subscribes to the mailbox.
+            </summary>
+            <returns>The server's response.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Unsubscribe">
+            <summary>
+            Unsubscribes from the mailbox.
+            </summary>
+            <returns>The server's response.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Delete">
+            <summary>
+            Deletes the mailbox.
+            </summary>
+            <returns>The server's response.</returns>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectInbox("inbox");
+            inbox.Delete();
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectInbox("inbox")
+            inbox.Delete()
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectInbox("inbox");
+            inbox.Delete();
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Rename(System.String)">
+            <summary>
+            Renames the mailbox.
+            </summary>
+            <param name="newMailboxName">The new name of the mailbox.</param>
+            <returns>The server's response.</returns>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectInbox("invox");
+            inbox.Rename("inbox");
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectInbox("invox")
+            inbox.Rename("inbox")
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectInbox("invox");
+            inbox.Rename("inbox");
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Search(System.String)">
+            <summary>
+            Searches the mailbox for messages corresponding to the query.
+            </summary>
+            <param name="query">Query to use.</param>
+            <returns>An array of integers containing ordinal positions of messages matching the query.</returns>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectInbox("inbox");
+            int[] ids = inbox.Search("SEARCH FLAGGED SINCE 1-Feb-1994 NOT FROM "Smith");
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectInbox("inbox")
+            Dim ids() As Integer = inbox.Search("SEARCH FLAGGED SINCE 1-Feb-1994 NOT FROM "Smith")
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectInbox("inbox");
+            var ids:int[] = inbox.Search("SEARCH FLAGGED SINCE 1-Feb-1994 NOT FROM "Smith");
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.SearchParse(System.String)">
+            <summary>
+            Search for messages accoridng to the given query.
+            </summary>
+            <param name="query">Query to use.</param>
+            <returns>A collection of messages matching the query.</returns>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectInbox("inbox");
+            MessageCollection messages = inbox.SearchParse("SEARCH FLAGGED SINCE 1-Feb-1994 NOT FROM "Smith");
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectInbox("inbox")
+            Dim messages As MessageCollection = inbox.SearchParse("SEARCH FLAGGED SINCE 1-Feb-1994 NOT FROM "Smith")
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectInbox("inbox");
+            var messages:MessageCollection = inbox.SearchParse("SEARCH FLAGGED SINCE 1-Feb-1994 NOT FROM "Smith");
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Search(System.String,System.String)">
+            <summary>
+            Searches the mailbox for messages corresponding to the query.
+            </summary>
+            <param name="query">The search query.</param>
+            <param name="charset">The charset the query has to be performed for.</param>
+            <returns>An array of integers containing ordinal positions of messages matching the query.</returns>
+            <example><see cref="M:ActiveUp.Net.Mail.Mailbox.Search(System.String)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.SearchParse(System.String,System.String)">
+            <summary>
+            Search for messages accoridng to the given query.
+            </summary>
+            <param name="query">Query to use.</param>
+            <param name="charset">The charset to apply the query for.</param>
+            <returns>A collection of messages matching the query.</returns>
+            <example><see cref="M:ActiveUp.Net.Mail.Mailbox.SearchParse(System.String)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.AddFlags(System.Int32,ActiveUp.Net.Mail.IFlagCollection)">
+            <summary>
+            Adds the specified flags to the message.
+            </summary>
+            <param name="messageOrdinal">The message's ordinal position.</param>
+            <param name="flags">Flags to be added to the message.</param>
+            <returns>The server's response.</returns>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectInbox("inbox");
+            FlagCollection flags = new FlagCollection();
+            flags.Add("Draft");
+            inbox.AddFlags(1,flags);
+            //Message 1 is marked as draft.
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectInbox("inbox")
+            Dim flags As New FlagCollection
+            flags.Add("Draft")
+            inbox.AddFlags(1,flags)
+            'Message 1 is marked as draft.
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectInbox("inbox");
+            var flags:FlagCollection = new FlagCollection();
+            flags.Add("Draft");
+            inbox.AddFlags(1,flags);
+            //Message is marked as draft.
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.RemoveFlags(System.Int32,ActiveUp.Net.Mail.IFlagCollection)">
+            <summary>
+            Removes the specified flags from the message.
+            </summary>
+            <param name="messageOrdinal">The message's ordinal position.</param>
+            <param name="flags">Flags to be removed from the message.</param>
+            <returns>The server's response.</returns>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectInbox("inbox");
+            FlagCollection flags = new FlagCollection();
+            flags.Add("Read");
+            inbox.RemoveFlags(1,flags);
+            //Message 1 is marked as unread.
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectInbox("inbox")
+            Dim flags As New FlagCollection
+            flags.Add("Read")
+            inbox.RemoveFlags(1,flags)
+            'Message 1 is marked as unread.
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectInbox("inbox");
+            var flags:FlagCollection = new FlagCollection();
+            flags.Add("Read");
+            inbox.RemoveFlags(1,flags);
+            //Message 1 is marked as unread.
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.SetFlags(System.Int32,ActiveUp.Net.Mail.IFlagCollection)">
+            <summary>
+            Sets the specified flags for the message.
+            </summary>
+            <param name="messageOrdinal">The message's ordinal position.</param>
+            <param name="flags">Flags to be stored for the message.</param>
+            <returns>The server's response.</returns>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectInbox("inbox");
+            FlagCollection flags = new FlagCollection();
+            flags.Add("Read");
+            flags.Add("Answered");
+            inbox.AddFlags(1,flags);
+            //Message is marked as read and answered. All prior flags are unset.
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectInbox("inbox")
+            Dim flags As New FlagCollection
+            flags.Add("Read")
+            flags.Add("Answered")
+            inbox.AddFlags(1,flags)
+            'Message is marked as read and answered. All prior flags are unset.
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectInbox("inbox");
+            var flags:FlagCollection = new FlagCollection();
+            flags.Add("Read");
+            flags.Add("Answered");
+            inbox.AddFlags(1,flags);
+            //Message is marked as read and answered. All prior flags are unset.
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.AddFlagsSilent(System.Int32,ActiveUp.Net.Mail.IFlagCollection)">
+            <summary>
+            Same as AddFlags() except no response is requested.
+            </summary>
+            <param name="messageOrdinal">The message's ordinal position.</param>
+            <param name="flags">Flags to be added to the message.</param>
+            <example><see cref="M:ActiveUp.Net.Mail.Mailbox.AddFlags(System.Int32,ActiveUp.Net.Mail.IFlagCollection)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.RemoveFlagsSilent(System.Int32,ActiveUp.Net.Mail.IFlagCollection)">
+            <summary>
+            Same as RemoveFlags() except no response is requested.
+            </summary>
+            <param name="messageOrdinal">The message's ordinal position.</param>
+            <param name="flags">Flags to be removed from the message.</param>
+            <example><see cref="M:ActiveUp.Net.Mail.Mailbox.RemoveFlags(System.Int32,ActiveUp.Net.Mail.IFlagCollection)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.SetFlagsSilent(System.Int32,ActiveUp.Net.Mail.IFlagCollection)">
+            <summary>
+            Same as SetFlags() except no response is requested.
+            </summary>
+            <param name="messageOrdinal">The message's ordinal position.</param>
+            <param name="flags">Flags to be set for the message.</param>
+            <example><see cref="M:ActiveUp.Net.Mail.Mailbox.SetFlags(System.Int32,ActiveUp.Net.Mail.IFlagCollection)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.CopyMessage(System.Int32,System.String)">
+            <summary>
+            Copies the specified message to the specified mailbox.
+            </summary>
+            <param name="messageOrdinal">The ordinal of the message to be copied.</param>
+            <param name="destinationMailboxName">The name of the destination mailbox.</param>
+            <returns>The destination mailbox.</returns>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectInbox("inbox");
+            inbox.CopyMessage(1,"Read Messages");
+            //Copies message 1 to Read Messages mailbox.
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectInbox("inbox")
+            inbox.CopyMessage(1,"Read Messages")
+            'Copies message 1 to Read Messages mailbox.
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectInbox("inbox");
+            inbox.CopyMessage(1,"Read Messages");
+            //Copies message 1 to Read Messages mailbox.
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Append(System.String)">
+            <summary>
+            Appends the provided message to the mailbox.
+            </summary>
+            <param name="messageLiteral">The message in a Rfc822 compliant format.</param>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Append(System.String,ActiveUp.Net.Mail.IFlagCollection)">
+            <summary>
+            Appends the provided message to the mailbox.
+            </summary>
+            <param name="messageLiteral">The message in a Rfc822 compliant format.</param>
+            <param name="flags">Flags to be set for the message.</param>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Append(System.String,ActiveUp.Net.Mail.IFlagCollection,System.DateTime)">
+            <summary>
+            Appends the provided message to the mailbox.
+            </summary>
+            <param name="messageLiteral">The message in a Rfc822 compliant format.</param>
+            <param name="flags">Flags to be set for the message.</param>
+            <param name="dateTime">The internal date to be set for the message.</param>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Append(ActiveUp.Net.Mail.Message)">
+            <summary>
+            Appends the provided message to the mailbox.
+            </summary>
+            <param name="message">The message to be appended.</param>
+            <example>
+            <code>
+            C#
+             
+            Message message = new Message();
+            message.From = new Address("jdoe@myhost.com","John Doe");
+            message.To.Add("mjohns@otherhost.com","Mike Johns");
+            message.Subject = "hey!";
+            message.Attachments.Add("C:\\myfile.doc");
+            message.HtmlBody.Text = "As promised, the requested document.&lt;br />&lt;br />Regards,&lt;br>John.";
+            
+            Imap4Client imap = new Imap4Client();
+            Mailbox inbox = imap.SelectMailbox("inbox");
+            inbox.Append(message);
+            imap.Disconnect();
+             
+            VB.NET
+             
+            Dim message As New Message
+            message.From = new Address("jdoe@myhost.com","John Doe")
+            message.To.Add("mjohns@otherhost.com","Mike Johns")
+            message.Subject = "hey!"
+            message.Attachments.Add("C:\myfile.doc")
+            message.HtmlBody.Text = "As promised, the requested document.&lt;br />&lt;br />Regards,&lt;br>John."
+            
+            Dim imap As New Imap4Client
+            Dim inbox As Mailbox = imap.SelectMailbox("inbox")
+            inbox.Append(message)
+            imap.Disconnect()
+              
+            JScript.NET
+             
+            var message:Message = new Message();
+            message.From = new Address("jdoe@myhost.com","John Doe")
+            message.To.Add("mjohns@otherhost.com","Mike Johns");
+            message.Subject = "hey!";
+            message.Attachments.Add("C:\\myfile.doc");
+            message.HtmlBody.Text = "As promised, the requested document.&lt;br />&lt;br />Regards,&lt;br>John."
+            
+            var imap:Imap4Client = new Imap4Client();
+            var inbox:Mailbox = imap.SelectMailbox("inbox");
+            inbox.Append(message);
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Append(ActiveUp.Net.Mail.Message,ActiveUp.Net.Mail.IFlagCollection)">
+            <summary>
+            Appends the provided message to the mailbox.
+            </summary>
+            <param name="message">The message to be appended.</param>
+            <param name="flags">Flags to be set for the message.</param>
+            <example>
+            <code>
+            C#
+             
+            Message message = new Message();
+            message.From = new Address("jdoe@myhost.com","John Doe");
+            message.To.Add("mjohns@otherhost.com","Mike Johns");
+            message.Subject = "hey!";
+            message.Attachments.Add("C:\\myfile.doc");
+            message.HtmlBody.Text = "As promised, the requested document.&lt;br />&lt;br />Regards,&lt;br>John.";
+            
+            FlagCollection flags = new FlagCollection();
+            flags.Add("Read");
+            
+            Imap4Client imap = new Imap4Client();
+            Mailbox inbox = imap.SelectMailbox("Read Messages");
+            inbox.Append(message,flags);
+            imap.Disconnect();
+             
+            VB.NET
+             
+            Dim message As New Message
+            message.From = new Address("jdoe@myhost.com","John Doe")
+            message.To.Add("mjohns@otherhost.com","Mike Johns")
+            message.Subject = "hey!"
+            message.Attachments.Add("C:\myfile.doc")
+            message.HtmlBody.Text = "As promised, the requested document.&lt;br />&lt;br />Regards,&lt;br>John."
+            
+            Dim flags As New FlagCollection
+            flags.Add("Read")
+             
+            Dim imap As New Imap4Client
+            Dim inbox As Mailbox = imap.SelectMailbox("Read Messages")
+            inbox.Append(message,flags)
+            imap.Disconnect()
+              
+            JScript.NET
+             
+            var message:Message = new Message();
+            message.From = new Address("jdoe@myhost.com","John Doe")
+            message.To.Add("mjohns@otherhost.com","Mike Johns");
+            message.Subject = "hey!";
+            message.Attachments.Add("C:\\myfile.doc");
+            message.HtmlBody.Text = "As promised, the requested document.&lt;br />&lt;br />Regards,&lt;br>John."
+            
+            var flags:FlagCollection = new FlagCollection();
+            flags.Add("Read");
+             
+            var imap:Imap4Client = new Imap4Client();
+            var inbox:Mailbox = imap.SelectMailbox("Read Messages");
+            inbox.Append(message,flags);
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Append(ActiveUp.Net.Mail.Message,ActiveUp.Net.Mail.IFlagCollection,System.DateTime)">
+            <summary>
+            Appends the provided message to the mailbox.
+            </summary>
+            <param name="message">The message to be appended.</param>
+            <param name="flags">Flags to be set for the message.</param>
+            <param name="dateTime">The internal date to be set for the message.</param>
+            <example>
+            <code>
+            C#
+             
+            Message message = new Message();
+            message.From = new Address("jdoe@myhost.com","John Doe");
+            message.To.Add("mjohns@otherhost.com","Mike Johns");
+            message.Subject = "hey!";
+            message.Attachments.Add("C:\\myfile.doc");
+            message.HtmlBody.Text = "As promised, the requested document.&lt;br />&lt;br />Regards,&lt;br>John.";
+            
+            FlagCollection flags = new FlagCollection();
+            flags.Add("Read");
+            
+            Imap4Client imap = new Imap4Client();
+            Mailbox inbox = imap.SelectMailbox("Read Messages");
+            inbox.Append(message,flags,System.DateTime.Now);
+            imap.Disconnect();
+             
+            VB.NET
+             
+            Dim message As New Message
+            message.From = new Address("jdoe@myhost.com","John Doe")
+            message.To.Add("mjohns@otherhost.com","Mike Johns")
+            message.Subject = "hey!"
+            message.Attachments.Add("C:\myfile.doc")
+            message.HtmlBody.Text = "As promised, the requested document.&lt;br />&lt;br />Regards,&lt;br>John."
+            
+            Dim flags As New FlagCollection
+            flags.Add("Read")
+             
+            Dim imap As New Imap4Client
+            Dim inbox As Mailbox = imap.SelectMailbox("Read Messages")
+            inbox.Append(message,flags,System.DateTime.Now)
+            imap.Disconnect()
+              
+            JScript.NET
+             
+            var message:Message = new Message();
+            message.From = new Address("jdoe@myhost.com","John Doe")
+            message.To.Add("mjohns@otherhost.com","Mike Johns");
+            message.Subject = "hey!";
+            message.Attachments.Add("C:\\myfile.doc");
+            message.HtmlBody.Text = "As promised, the requested document.&lt;br />&lt;br />Regards,&lt;br>John."
+            
+            var flags:FlagCollection = new FlagCollection();
+            flags.Add("Read");
+             
+            var imap:Imap4Client = new Imap4Client();
+            var inbox:Mailbox = imap.SelectMailbox("Read Messages");
+            inbox.Append(message,flags,System.DateTime.Now);
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Append(System.Byte[])">
+            <summary>
+            Appends the provided message to the mailbox.
+            </summary>
+            <param name="messageData">The message in a Rfc822 compliant format.</param>
+            <example><see cref="M:ActiveUp.Net.Mail.Mailbox.Append(System.String)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Append(System.Byte[],ActiveUp.Net.Mail.IFlagCollection)">
+            <summary>
+            Appends the provided message to the mailbox.
+            </summary>
+            <param name="messageData">The message in a Rfc822 compliant format.</param>
+            <param name="flags">Flags to be set for the message.</param>
+            <example><see cref="M:ActiveUp.Net.Mail.Mailbox.Append(System.String)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Append(System.Byte[],ActiveUp.Net.Mail.IFlagCollection,System.DateTime)">
+            <summary>
+            Appends the provided message to the mailbox.
+            </summary>
+            <param name="messageData">The message in a Rfc822 compliant format.</param>
+            <param name="flags">Flags to be set for the message.</param>
+            <param name="dateTime">The internal date to be set for the message.</param>
+            <example><see cref="M:ActiveUp.Net.Mail.Mailbox.Append(System.String)"/></example>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Mailbox.Empty(System.Boolean)">
+            <summary>
+            Empties the mailbox.
+            </summary>
+            <param name="expunge">If true, all messages are permanently removed. Otherwise they are all marked with the Deleted flag.</param>
+            <example>
+            <code>
+            C#
+             
+            Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            Mailbox inbox = imap.SelectInbox("inbox");
+            inbox.Empty(true);
+            //Messages from inbox are permanently removed.
+            imap.Disconnect();
+            
+            VB.NET
+             
+            Dim imap As New Imap4Client
+            imap.Connect("mail.myhost.com")
+            imap.Login("jdoe1234","tanstaaf")
+            Dim inbox As Mailbox = imap.SelectInbox("inbox")
+            inbox.Empty(True)
+            'Messages from inbox are permanently removed.
+            imap.Disconnect()
+            
+            JScript.NET
+             
+            var imap:Imap4Client imap = new Imap4Client();
+            imap.Connect("mail.myhost.com");
+            imap.Login("jdoe1234","tanstaaf");
+            var inbox:Mailbox = imap.SelectInbox("inbox");
+            inbox.Empty(true);
+            //Messages from inbox are permanently removed.
+            imap.Disconnect();
+            </code>
+            </example>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ActiveUp.Net.Mail.Mailbox.DeleteMessage(System.Int32,System.Boolean)" -->
+        <member name="P:ActiveUp.Net.Mail.Mailbox.SourceClient">
+            <summary>
+            The Imap4Client object that will be used to perform commands on the server.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Mailbox.Name">
+            <summary>
+            The full (hierarchical) name of the mailbox.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Mailbox.ShortName">
+            <summary>
+            The name of the mailbox, without hierarchy.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Mailbox.Recent">
+            <summary>
+            The amount of recent messages (messages that have been added since this mailbox was last checked).
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Mailbox.MessageCount">
+            <summary>
+            The amount of messages in the mailbox.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Mailbox.FirstUnseen">
+            <summary>
+            The ordinal position of the first unseen message in the mailbox.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Mailbox.UidValidity">
+            <summary>
+            The Uid Validity number. This number allows to check if Unique Identifiers have changed since the mailbox was last checked.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Mailbox.ApplicableFlags">
+            <summary>
+            Flags that are applicable in this mailbox.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Mailbox.PermanentFlags">
+            <summary>
+            Flags that the client can permanently set in this mailbox.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Mailbox.Permission">
+            <summary>
+            The mailbox's permission (ReadWrite or ReadOnly)
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Mailbox.SubMailboxes">
+            <summary>
+            The mailbox's child mailboxes.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Mailbox.Fetch">
+            <summary>
+            The mailbox's fetching utility.
+            </summary>
+        </member>
+        <member name="T:ActiveUp.Net.Mail.MailboxCollection">
+            <summary>
+            Represents a collection of Mailboxes.
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.MailboxCollection.Add(ActiveUp.Net.Mail.Mailbox)">
+            <summary>
+            Adds the provided mailbox to the collection.
+            </summary>
+            <param name="mailbox">The mailbox to be added.</param>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.MailboxCollection.Item(System.Int32)">
+            <summary>
+            Returns the mailbox at index [index] in the collection.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.MailboxCollection.Item(System.String)">
+            <summary>
+            Returns the mailbox with the specified name in the collection.
+            </summary>
+        </member>
+        <member name="T:ActiveUp.Net.Mail.MailboxPermission">
+            <summary>
+            Represents a mailbox's permission.
+            </summary>
+        </member>
+        <member name="F:ActiveUp.Net.Mail.MailboxPermission.ReadOnly">
+            <summary>
+            Mailbox is opened in [READ-ONLY] mode.
+            </summary>
+        </member>
+        <member name="F:ActiveUp.Net.Mail.MailboxPermission.ReadWrite">
+            <summary>
+            Mailbox is opened in [READ-WRITE] mode.
+            </summary>
+        </member>
+        <member name="F:ActiveUp.Net.Mail.MailboxPermission.Unknown">
+            <summary>
+            Mailbox's permission is unknown.
+            </summary>
+        </member>
+    </members>
+</doc>

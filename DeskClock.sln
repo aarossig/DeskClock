@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeskClock", "DeskClock\DeskClock.csproj", "{3D5C395F-64CD-4ACD-AD4B-CE9A95B47E15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GifPrepper", "GifPrepper\GifPrepper.csproj", "{739E4AAE-76E7-4217-BF8E-E1F4D06D330C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{3D5C395F-64CD-4ACD-AD4B-CE9A95B47E15}.Debug|x86.Build.0 = Debug|x86
 		{3D5C395F-64CD-4ACD-AD4B-CE9A95B47E15}.Release|x86.ActiveCfg = Release|x86
 		{3D5C395F-64CD-4ACD-AD4B-CE9A95B47E15}.Release|x86.Build.0 = Release|x86
+		{739E4AAE-76E7-4217-BF8E-E1F4D06D330C}.Debug|x86.ActiveCfg = Debug|x86
+		{739E4AAE-76E7-4217-BF8E-E1F4D06D330C}.Debug|x86.Build.0 = Debug|x86
+		{739E4AAE-76E7-4217-BF8E-E1F4D06D330C}.Release|x86.ActiveCfg = Release|x86
+		{739E4AAE-76E7-4217-BF8E-E1F4D06D330C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = DeskClock\DeskClock.csproj

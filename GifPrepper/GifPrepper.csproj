@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3D5C395F-64CD-4ACD-AD4B-CE9A95B47E15}</ProjectGuid>
+    <ProjectGuid>{739E4AAE-76E7-4217-BF8E-E1F4D06D330C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DeskClock</RootNamespace>
-    <AssemblyName>DeskClock</AssemblyName>
+    <RootNamespace>GifPrepper</RootNamespace>
+    <AssemblyName>GifPrepper</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,35 +32,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="VfdDriver">
-      <HintPath>..\..\VfdDriver\VfdDriver\bin\Debug\VfdDriver.dll</HintPath>
-    </Reference>
-    <Reference Include="ActiveUp.Net.Imap4">
-      <HintPath>lib\ActiveUp.Net.Imap4.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Configuration" />
-    <Reference Include="ActiveUp.Net.Common">
-      <HintPath>lib\ActiveUp.Net.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="ActiveUp.Net.Mail">
-      <HintPath>lib\ActiveUp.Net.Mail.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Animations.cs" />
-    <Compile Include="WeatherData.cs" />
-    <Compile Include="Coordinates.cs" />
-    <Compile Include="SunriseSunset.cs" />
-    <Compile Include="TemperatureConditions.cs" />
-    <Compile Include="WindConditions.cs" />
-    <Compile Include="AtmosphericConditions.cs" />
-    <Compile Include="CloudConditions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <None Include="Properties\app.config" />
-  </ItemGroup>
 </Project>

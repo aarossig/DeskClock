@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ActiveUp.Net.Mail</name>
+    </assembly>
+    <members>
+        <member name="T:ActiveUp.Net.Mail.Merger">
+            <summary>
+            Merge the messages and it's properties with datasources.
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.#ctor">
+            <summary>
+            The default constructor.
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.#ctor(ActiveUp.Net.Mail.Templater)">
+            <summary>
+            Instanciante the merger and auto-fill it's properties with templater data.
+            </summary>
+            <param name="templater">The Templater object that contains the data.</param>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeText(System.String,System.Object,System.Boolean)">
+            <summary>
+            Merge a text string with the specified datasource.
+            </summary>
+            <param name="text">The text to bind.</param>
+            <param name="dataSource">The datasource to use.</param>
+            <param name="repeat">Specify if you want the text to be repeated with each item in the datasource.</param>
+            <returns>The merged text string.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeText(System.String,System.Object)">
+            <summary>
+            Merge a text string with the specified item.
+            </summary>
+            <param name="text">The text string to merge.</param>
+            <param name="item">The item to use for merging.</param>
+            <returns>The merged text string.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeMessage">
+            <summary>
+            Merge a message with the specified item.
+            </summary>
+            <returns>The merged the message.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeMessage(ActiveUp.Net.Mail.Message,System.Object)">
+            <summary>
+            Merge a message with the specified item.
+            </summary>
+            <param name="message">The Message object to merge.</param>
+            <param name="item">The item to use for merging.</param>
+            <returns>The merged the message.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.CleanUnusedTags(System.String)">
+            <summary>
+            Clean up unused tags in the message.
+            </summary>
+            <param name="Body">The body text to use for merging.</param>
+            <returns>The merged message.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.ProcessIDs(System.String,System.Object,System.Boolean)">
+            <summary>
+            Process IDs in the message.
+            </summary>
+            <param name="Body">The body text to use for merging.</param>
+            <param name="dataSource"></param>
+            <param name="repeat"></param>
+            <returns>The merged message.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeMessage(System.Object)">
+            <summary>
+            Merge the Message property with the specified datasource.
+            </summary>
+            <param name="dataSource">The datasource to use for merging.</param>
+            <returns>The merged message.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeMessage(System.Object,System.Boolean)">
+            <summary>
+            Merge the Message property with the specified datasource.
+            </summary>
+            <param name="dataSource">The datasource to use for merging.</param>
+            <param name="repeat">Specify if the text template will be repeated or not.</param>
+            <returns>The merged message.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeMessage(ActiveUp.Net.Mail.Message,System.Object,System.Boolean)">
+            <summary>
+            Merge a Message object with the specified datasource.
+            </summary>
+            <param name="message">The message to merge.</param>
+            <param name="dataSource">The datasource to use for merging.</param>
+            <param name="repeat">Specify if the text template will be repeated or not.</param>
+            <returns>The merge message.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeCustom(System.Collections.Hashtable,System.Object,System.Boolean)">
+            <summary>
+            Merge the custom collection with the specified datasource.
+            </summary>
+            <param name="customcollection">The custom collection to use for merging.</param>
+            <param name="dataSource">The datasource to use for merging.</param>
+            <param name="repeat">Specify if the texts will be repeated or not.</param>
+            <returns>The merged Custom collection</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeCustom(System.Collections.Hashtable,System.Object)">
+            <summary>
+            Merge the custom collection with the specified datasource.
+            </summary>
+            <param name="customcollection">The custom collection to use for merging.</param>
+            <param name="dataSource">The datasource to use for merging.</param>
+            <returns>The merged Custom collection</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeCustomItem(System.Collections.Hashtable,System.Object)">
+            <summary>
+            Merge the custom collection with the specified item.
+            </summary>
+            <param name="customcollection">The custom collection to use for merging.</param>
+            <param name="item">The item to use for merging.</param>
+            <returns>The merged custom colection.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeAddresses(ActiveUp.Net.Mail.AddressCollection,System.Object,System.Boolean)">
+            <summary>
+            Merge the Address collection with the specified datasource.
+            </summary>
+            <param name="addresses">The addresses to merge.</param>
+            <param name="dataSource">The datasource to use for merging.</param>
+            <param name="repeat">Specify if the texts will be repeated or not.</param>
+            <returns>The merged Address collection</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeAddress(ActiveUp.Net.Mail.Address,System.Object)">
+            <summary>
+            Merge the Address collection with the specified datasource.
+            </summary>
+            <param name="address">The address to merge.</param>
+            <param name="dataSource">The datasource to use for merging.</param>
+            <returns>The merged Address collection</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeAddresses(ActiveUp.Net.Mail.AddressCollection,System.Object)">
+            <summary>
+            Merge the address collection with the specified item.
+            </summary>
+            <param name="addresses">The address to merge.</param>
+            <param name="item">The item to use for merging.</param>
+            <returns>The merged Address colection.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeListTemplate(System.String,System.Object)">
+            <summary>
+            Merge the specified list template with the datasource.
+            </summary>
+            <param name="name">The name of the list template.</param>
+            <param name="dataSource">The datasource to merge with.</param>
+            <returns>The merged message.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeListTemplate(System.String,ActiveUp.Net.Mail.ListTemplateCollection,System.Object)">
+            <summary>
+            Merge the specified list template with the datasource.
+            </summary>
+            <param name="name">The name of the list template.</param>
+            <param name="listTemplates">The ListTemplates to use.</param>
+            <param name="dataSource">The datasource to merge with.</param>
+            <returns>The merged message.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeListTemplate(ActiveUp.Net.Mail.Message,System.String,ActiveUp.Net.Mail.ListTemplateCollection,System.Object)">
+            <summary>
+            Merge the specified list template with the datasource.
+            </summary>
+            <param name="message">The message that contain the list template field.</param>
+            <param name="name">The name if the list template.</param>
+            <param name="listTemplates">The ListTemplates to use.</param>
+            <param name="dataSource">The datasource to merge with.</param>
+            <returns>The merged message.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeCollection(ActiveUp.Net.Mail.Message,System.Object)">
+            <summary>
+            Create a collection of message based on the merging of the message and a datasource.
+            </summary>
+            <param name="message">The message to use as a base for merging.</param>
+            <param name="dataSource">The datasource to use for merging.</param>
+            <returns>The merged MessageCollection.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeCollection(System.Object)">
+            <summary>
+            Create a collection of message based on the merging of the Message property and a datasource.
+            </summary>
+            <param name="dataSource">The datasource to use for merging.</param>
+            <returns>The merged MessageCollection.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeCollection(System.Object,System.Boolean)">
+            <summary>
+            Create a collection of message based on the merging of the message and a datasource.
+            </summary>
+            <param name="dataSource">The datasource to use for merging.</param>
+            <param name="send">Specify if you want to send the message when merged.</param>
+            <returns>The merged MessageCollection.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.MergeCollection(ActiveUp.Net.Mail.Message,System.Object,System.Boolean)">
+            <summary>
+            Create a collection of message based on the merging of the message and a datasource.
+            </summary>
+            <param name="message">The message to use as a base for merging.</param>
+            <param name="dataSource">The datasource to use for merging.</param>
+            <param name="send">Specify if you want to send the message when merged.</param>
+            <returns>The merged MessageCollection.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.GetFields(System.String)">
+            <summary>
+            Get all fields contained in the specified string.
+            </summary>
+            <param name="source">The string containing the fields.</param>
+            <returns>An arraylist filled with the fields.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.GetEnumerator(System.Object)">
+            <summary>
+            Get the enumerator from the specified data source.
+            </summary>
+            <param name="dataSource">The data source.</param>
+            <returns>The enumerator.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.IsNumeric(System.Object)">
+            <summary>
+            Checks if supplied expression is a numeric value. Supports multiple languages.
+            </summary>
+            <param name="expression">An expression that needs to be checked.</param>
+            <returns>A boolean response that is True if it is a numeric value.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.ReplaceField(System.String,System.String,System.String)">
+            <summary>
+            Replace all specified fields of the specified string with the specified replacement string.
+            </summary>
+            <param name="source">The source string.</param>
+            <param name="field">The field to search for.</param>
+            <param name="replacement">The replacement.</param>
+            <returns>The string with replaced content.</returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.ReplaceField(ActiveUp.Net.Mail.Message,System.String,System.String)">
+            <summary>
+            Replace all specified fields of the message body with the specified replacement.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="field">The field to search for.</param>
+            <param name="replacement">The replacement.</param>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.Merger.ReplaceInAddresses(ActiveUp.Net.Mail.AddressCollection,System.String,System.String)">
+            <summary>
+            Replace in an AddressCollection.
+            </summary>
+            <param name="addresses">The AddressCollection.</param>
+            <param name="field">The field.</param>
+            <param name="replacement">The replacement string.</param>
+            <returns>The AddressCollection with replaced content.</returns>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Merger.RemoveUnusedTags">
+            <summary>
+            Whether to remove unused tags in the message after merging the datasource.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Merger.Logger">
+            <summary>
+            Gets or sets the logging settings.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Merger.Regions">
+            <summary>
+            Gets or sets the region collection.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Merger.Conditions">
+            <summary>
+            Gets or sets the conditional collection.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Merger.FieldsFormats">
+            <summary>
+            Gets or sets the fields format options.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Merger.SmtpServers">
+            <summary>
+            Gets or sets the SMTP servers.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Merger.Message">
+            <summary>
+            Gets or sets the logging settings.
+            </summary>
+        </member>
+        <member name="P:ActiveUp.Net.Mail.Merger.ListTemplates">
+            <summary>
+            Gets or sets the List templates.
+            </summary>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.RblServer.GetRblStatus(System.String,System.String)">
+            <summary>
+            Gets the RBL status.
+            </summary>
+            <param name="rblServer">The RBL server.</param>
+            <param name="ipString">The ip string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.RblServer.GetRblStatus(System.String,System.Net.IPAddress)">
+            <summary>
+            Gets the RBL status.
+            </summary>
+            <param name="rblServer">The RBL server.</param>
+            <param name="ip">The ip.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.RblServer.GetRblIp(System.String,System.String)">
+            <summary>
+            Gets the RBL ip.
+            </summary>
+            <param name="rblServer">The RBL server.</param>
+            <param name="ipString">The ip string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ActiveUp.Net.Mail.RblServer.GetRblIp(System.String,System.Net.IPAddress)">
+            <summary>
+            Gets the RBL ip.
+            </summary>
+            <param name="rblServer">The RBL server.</param>
+            <param name="ip">The ip.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
